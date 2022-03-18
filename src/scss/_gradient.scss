@@ -1,0 +1,101 @@
+.gradient-container {
+    position: relative;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    margin: auto;
+}
+
+.gradient {
+    width: 100%;
+    background-color: rgba(0, 0, 0, .1);
+    height: 80%;
+}
+
+.title-container {
+    position: absolute;
+    top: calc(10vh + 50px);
+    right: 0%;
+    transform: translateX(50%);
+    max-width: 260px;
+}
+
+.gradient-title {
+    font-family:  'Bowlby One SC', sans-serif;
+    font-size: 3.000em;
+    font-weight: 400;
+    margin: 0;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 25px 0;
+}
+
+#rotation {
+    position: absolute;
+    top: 50vh;
+    left: -450px;
+    display: block;
+    height: 3px;
+    width: 100%;
+    transform: rotate(90deg) translateX(-50%);
+}
+
+.gradient-output {
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+}
+
+@media screen and (max-width: 1200px) {
+    .gradient-container {
+        margin: 0 0 0 10vw;
+    }
+
+    #rotation {
+        display: block;
+        position: relative;
+        top: auto;
+        left: auto;
+        height: 3px;
+        width: 100%;
+        transform: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .gradient-container {
+        margin: auto;
+        max-width: none;
+        width: 70%;
+    }
+
+    .title-container {
+        left: 0;
+        transform: none;
+        padding: 0 30px;
+        max-width: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .gradient-container {
+        width: 100%;
+    }
+
+    .gradient {
+        height: 100%;
+    }
+
+    .title-container {
+        top: 50px;
+    }
+}
